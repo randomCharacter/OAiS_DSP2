@@ -31,12 +31,8 @@ void downsample(Int16 *input, Int16 *output, int M, int N)
 
 void decimate(Int16 *input, Int16 *output, int M, int N)
 {
-    int i;
     clear_history();
-    for (i = 0; i < N; i++) {
-        input[i] = fir_basic(input[i], lp_filter, history, N_COEFF);
-    }
-	downsample(input, output, M, N);
+    fir_basic_decimate(input, output, N, M, lp_filter, history, N_COEFF);
 }
 
 void upsample(Int16 *input, Int16 *output, int L, int N)
@@ -53,21 +49,13 @@ void upsample(Int16 *input, Int16 *output, int L, int N)
 
 void interpolate(Int16 *input, Int16 *output, int L, int N)
 {
-    int i;
-	upsample(input, output, L, N);
 	clear_history();
-	for (i = 0; i < N * L; i++) {
-        output[i] = fir_basic(output[i], lp_filter, history, N_COEFF);
-    }
+	fir_basic_interpolate(input, output, N, L, lp_filter, history, N_COEFF);
 }
 
 void resample(Int16 *input, Int16 *output, int L, int M, int N)
 {
     int i;
-    upsample(input, buffer, L, N);
-    clear_history();
-    for (i = 0; i < L * N; i ++) {
-        buffer[i] = fir_basic(buffer[i], lp_filter, history, N_COEFF);
-    }
-	downsample(buffer, output, M, L * N);
+    interpolate(input, buffer, L, N);
+	decimate(buffer, output, M, L * N);
 }
