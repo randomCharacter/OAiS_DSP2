@@ -34,13 +34,14 @@ void calculatePeekCoeff(float c_alpha, float c_beta, Int16* output)
     clip(&t1);
 
     t2 = -c_beta * (32768 * c_alpha);
+    t2 >>= 1;
     clip(&t2);
 
     output[0] = t1;
-    output[1] = t2 / 2;
+    output[1] = t2;
     output[2] = 32767;
     output[3] = 32767;
-    output[4] = t2 / 2;
+    output[4] = t2;
     output[5] = t1;
 }
 

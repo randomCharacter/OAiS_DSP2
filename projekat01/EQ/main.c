@@ -105,7 +105,7 @@ void main( void )
     /* Inicijalizacija LCD kontrolera */
     initPrintNumber();
 
-	printf("\n Ekvalizacija audio signala \n");
+    printf("\n Ekvalizacija audio signala \n");
 		
     /* Inicijalizacija veze sa AIC3204 kodekom (AD/DA) */
     aic3204_hardware_init();
@@ -169,12 +169,12 @@ void main( void )
 
     	for(i = 0; i < AUDIO_IO_SIZE; i++)
         {
-			/* Levi kanal */
+	    /* Levi kanal */
     	    buffL1[i] = shelvingLP(sampleBufferL[i], shCoeffL, xHistoryL, yHistoryL, k[0]);
             buffL2[i] = shelvingPeek(buffL1[i], shPeekCoeffPL, xHistoryPL, yHistoryPL, k[1]);
             buffL3[i] = shelvingPeek(buffL2[i], shPeekCoeffPH, xHistoryPH, yHistoryPH, k[2]);
             buffL4[i] = shelvingHP(buffL3[i], shCoeffH, xHistoryH, yHistoryH, k[3]);
-			/* Desni kanal */
+	    /* Desni kanal */
 			buffR1[i] = shelvingLP(sampleBufferR[i], shCoeffL, xHistoryL, yHistoryL, k[0]);
             buffR2[i] = shelvingPeek(buffR1[i], shPeekCoeffPL, xHistoryPL, yHistoryPL, k[1]);
             buffR3[i] = shelvingPeek(buffR2[i], shPeekCoeffPH, xHistoryPH, yHistoryPH, k[2]);
@@ -185,7 +185,7 @@ void main( void )
 	}
 
     	
-	/* Prekid veze sa AIC3204 kodekom */
+    /* Prekid veze sa AIC3204 kodekom */
     aic3204_disable();
 
     printf( "\n***Kraj programa***\n" );
