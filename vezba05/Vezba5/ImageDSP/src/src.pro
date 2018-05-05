@@ -18,8 +18,8 @@ SOURCES += \
 	HoverEditTriggerListView.cpp \
 	TableModel.cpp \
 	Project.cpp \
-	ImageProcessing.cpp \
-	ColourSpaces.cpp
+        ImageProcessing.cpp \
+        ColorSpaces.cpp
 
 HEADERS += \
 	MainWindow.h \
@@ -31,8 +31,8 @@ HEADERS += \
 	HoverEditTriggerListView.h \
 	TableModel.h \
 	Project.h \
-	ImageProcessing.h \
-	ColourSpaces.h
+        ImageProcessing.h \
+        ColorSpaces.h
 
 FORMS += \
 	MainWindow.ui \
