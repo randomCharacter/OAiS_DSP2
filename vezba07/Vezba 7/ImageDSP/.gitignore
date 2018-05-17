@@ -1,0 +1,11 @@
+*~
+Makefile
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.moc
+*.o
+*.exe
+*.pro.user
+bin/
+lib/
