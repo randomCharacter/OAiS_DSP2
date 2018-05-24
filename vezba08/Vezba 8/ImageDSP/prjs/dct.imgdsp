@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imgdsp>
+<imgdsp>
+    <programs>
+        <program name="DCT">
+            <params>
+            </params>
+        </program>
+		<program name="DCT + IDCT">
+            <params>
+			</params>
+        </program>
+		<program name="Mask Y">
+            <params>
+                <param name="B" min="0" current="100" max="100"/>
+			</params>
+        </program>
+		<program name="Mask DCT">
+            <params>
+                <param name="B" min="0" current="100" max="100"/>
+			</params>
+        </program>
+		<program name="DCT Quantization">
+            <params>
+            </params>
+        </program>
+    </programs>
+    <in_imgs>
+	 <in_img file_name="lena.bmp"/>
+        <in_img file_name="playing_kitten.jpg"/>
+		<in_img file_name="baboon.bmp"/>
+        <in_img file_name="green_cat.jpg"/>
+        <in_img file_name="image1.bmp"/>
+		<in_img file_name="CatWithGreenEyes.png"/>
+    </in_imgs>
+    <out_imgs>
+        <out_img file_name="processed_img.jpg"/>
+    </out_imgs>
+</imgdsp>
