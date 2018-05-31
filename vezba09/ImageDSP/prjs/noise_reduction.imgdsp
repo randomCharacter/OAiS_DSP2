@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imgdsp>
+<imgdsp>
+    <programs>
+        <program name="Moving Average">
+            <params>
+            </params>
+        </program>
+		<program name="Gaussian">
+            <params>
+				<param name="sigma" min="0.0001" current="1" max="10"/>
+			</params>
+        </program>
+		<program name="Median">
+            <params>
+			</params>
+        </program>
+    </programs>
+    <in_imgs>
+		<in_img file_name="LenaWithNoise.bmp"/>
+        <in_img file_name="LenaWithImpulsNoise.bmp"/>
+		<in_img file_name="playing_kitten_noise.jpg"/>
+		<in_img file_name="playing_kitten_impulse.jpg"/>
+        <in_img file_name="green_cat_noise.jpg"/>
+		<in_img file_name="green_cat_impulse.jpg"/>
+        <in_img file_name="CatWithGreenEyesNoise.png"/>
+		<in_img file_name="CatWithGreenEyesImpulse.png"/>
+    </in_imgs>
+    <out_imgs>
+        <out_img file_name="processed_img.jpg"/>
+    </out_imgs>
+</imgdsp>
