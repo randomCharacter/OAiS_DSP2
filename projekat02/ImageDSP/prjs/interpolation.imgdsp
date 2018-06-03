@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imgdsp>
+<imgdsp>
+    <programs>
+        <program name="Sample and hold">
+            <params>
+			    <param name="Vertical:" min="1.0" current="1.0" max="10.0"/>
+				<param name="Horizontal:" min="1.0" current="1.0" max="10.0"/>
+            </params>
+        </program>
+		<program name="Bilinear">
+            <params>
+				<param name="Vertical:" min="1.0" current="1.0" max="10.0"/>
+				<param name="Horizontal:" min="1.0" current="1.0" max="10.0"/>
+			</params>
+        </program>
+        <program name="Bicubic">
+            <params>
+				<param name="Vertical:" min="1.0" current="1.0" max="10.0"/>
+				<param name="Horizontal:" min="1.0" current="1.0" max="10.0"/>
+			</params>
+        </program>
+		<program name="Swirl">
+            <params>
+			    <param name="k1:" min="-0.01" current="0" max="0.01"/>
+			</params>
+        </program>
+		<program name="Swirl Bilinear">
+            <params>
+			    <param name="k1:" min="-0.01" current="0" max="0.01"/>
+			</params>
+        </program>
+    </programs>
+    <in_imgs>
+	    <in_img file_name="lena.bmp"/>
+		<in_img file_name="baboon.bmp"/>
+        <in_img file_name="green_cat.jpg"/>
+        <in_img file_name="image1.bmp"/>
+		<in_img file_name="clock.bmp"/>
+		<in_img file_name="tennis.bmp"/>
+        <in_img file_name="playing_kitten.jpg"/>
+		<in_img file_name="pool.png"/>
+    </in_imgs>
+    <out_imgs>
+        <out_img file_name="processed_img.jpg"/>
+    </out_imgs>
+</imgdsp>
