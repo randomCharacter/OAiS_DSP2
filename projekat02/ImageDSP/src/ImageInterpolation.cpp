@@ -36,7 +36,7 @@ void bilinearInterpolate(const uchar input[], int xSize, int ySize, uchar output
         {
             int newI = (i) * scaleX;
             int newJ = (j) * scaleY;
-            double a = i / scaleY - floor(i / scaleY);
+            double a = j / scaleY - floor(j / scaleY);
             double b = i / scaleX - floor(i / scaleX);
 
             output[3 * i + j * newXSize * 3] =
