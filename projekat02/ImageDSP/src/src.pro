@@ -8,11 +8,7 @@ TEMPLATE = app
 DESTDIR = ../bin
 
 SOURCES += \
-    ColorSpaces.cpp \
-    DCT.cpp \
     HoverEditTriggerListView.cpp \
-    ImageFIlter.cpp \
-    ImageHistogram.cpp \
     ImageInterpolation.cpp \
     ImageProcessing.cpp \
     ImageViewer.cpp \
@@ -20,7 +16,6 @@ SOURCES += \
     ItemWidget.cpp \
     main.cpp \
     MainWindow.cpp \
-    NxNDCT.cpp \
     ParamItem.cpp \
     Project.cpp \
     qcustomplot.cpp \
@@ -28,18 +23,13 @@ SOURCES += \
     UniversalItemDelegate.cpp
 
 HEADERS += \
-    ColorSpaces.h \
-    DCT.h \
     HoverEditTriggerListView.h \
-    ImageFilter.h \
-    ImageHistogram.h \
     ImageInterpolation.h \
     ImageProcessing.h \
     ImageViewer.h \
     InImgItem.h \
     ItemWidget.h \
     MainWindow.h \
-    NxNDCT.h \
     ParamItem.h \
     Project.h \
     qcustomplot.h \
