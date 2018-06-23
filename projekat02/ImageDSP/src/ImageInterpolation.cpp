@@ -1,5 +1,4 @@
 #include "ImageInterpolation.h"
-#include "ColorSpaces.h"
 #include <math.h>
 
 
@@ -36,8 +35,8 @@ void bilinearInterpolate(const uchar input[], int xSize, int ySize, uchar output
         {
             int newI = (i) * scaleX;
             int newJ = (j) * scaleY;
-            double a = j / scaleY - floor(j / scaleY);
-            double b = i / scaleX - floor(i / scaleX);
+            double a = j * scaleY - floor(j * scaleY);
+            double b = i * scaleX - floor(i * scaleX);
 
             output[3 * i + j * newXSize * 3] =
                     (1 - a) * (1 - b) * input[3 * newI + newJ * xSize * 3] +
